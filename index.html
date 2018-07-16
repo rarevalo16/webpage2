@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Photography Page</title>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="#home" class id="home">Home</a></li> &nbsp; &nbsp;
+      <li><a href="#services" class id="services">Services</a></li> &nbsp; &nbsp;
+      <li><a href="#contact" class id="contact">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <div class="row" onclick="void(0)">
+    <div class="column picture1">
+      <div class="text">Attraction</div>
+    </div>
+    <div class="column picture2">
+      <div class="text">Beauty</div>
+    </div>
+    <div class="column picture3">
+      <div class="text">Cunning</div>
+    </div>
+  </div>
+
+</body>
+    
+<footer>@Ryan Arevalo</footer>
+    
+<!-- css under here -->
+    
+<style>
+    
+/* page setup */
+    
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+/* Styling the navigation */
+    
+    #home, #services, #contact {
+        font-size: 30px;
+    }
+
+
+ul {
+  text-align: center;
+  padding-left: 0;
+  list-style: none;
+}
+
+@media (max-width: 320px) {
+  ul {
+    text-align: left;
+    padding: 5px;
+  }
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  padding: 16px 16px 16px 0;
+  color: #fff;
+  display: block;
+  text-decoration: none;
+  transition: color 1s ease;
+}
+
+nav {
+  display: block;
+  width: 100%;
+  height: 10%;
+  position: fixed;
+  z-index: 2;
+  padding-bottom: 27px;
+  background-color: #2d5668;
+  border-bottom: 2px solid #fff;
+}
+
+@media (max-width: 320px) {
+  nav {
+    padding-bottom: 27px;
+  }
+}
+
+li:hover a{
+  color: #0000ff;
+}
+
+/* Row layout */
+
+
+.row {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  clear: both;
+  background: #000;
+}
+
+
+/* Columns layout */
+
+
+.column {
+  width: 33%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+}
+
+
+/* Background images and style */
+
+
+.row .column {
+  opacity: 0.4;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.picture1 {
+  background-image: url("https://unsplash.it/700/600/?random");
+}
+
+.picture2 {
+  background-image: url("https://unsplash.it/700/550/?random");
+}
+
+.picture3 {
+  background-image: url("https://unsplash.it/700/500/?random");
+}
+
+
+/* Styling the typography */
+
+
+.column .text {
+  position: relative;
+  top: 60%;
+  left: 50%;
+  width: 50%;
+  margin-left: -25%;
+}
+
+.text {
+  text-align: center;
+  font-family: arial;
+  font-size: 32px;
+  color: #fff;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+
+
+
+/* Animation */
+
+
+.row .column {
+  transition: 1s;
+}
+
+.row:hover .column {
+  width: 20%;
+}
+
+.row:hover .column:hover {
+  width: 60%;
+}
+
+.column:hover {
+  opacity: 1;
+}
+
+.column:hover .text {
+  transition: ease-in .9s;
+  transform: none;
+  font-size: 22px;
+}
+
+.column:not( :hover ) .text {
+  transition: ease-out .9s;
+}
+    
+    
+    
+</style>
+
+<!-- end of the css -->
+
+</html>
